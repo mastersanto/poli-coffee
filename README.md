@@ -35,8 +35,31 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 Steps:
 
+- make sure you are in main branch
+
+```bash
+git checkout main
+```
+
 - pull from main branch
+
+```bash
+git pull origin main
+```
+
 - create branch and work locally
+
+```bash
+git checkout -b <branch-name>
+```
+
 - commit your changes and push
+
+```bash
+git add .
+git commit -m "commit description about code changes"
+git push origin <branch-name>
+```
+
 - create a Pull Request and wait for approval
 - once approved, merge it to main, it will trigger the deployment to Vercel
