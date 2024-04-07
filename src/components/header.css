@@ -1,0 +1,9 @@
+.header {
+  @apply flex flex-row content-between py-3;
+}
+
+.nav {
+  > ul {
+    @apply flex flex-row;
+  }
+}
