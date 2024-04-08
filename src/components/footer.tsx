@@ -1,3 +1,5 @@
+import "./footer.css";
+
 export default function Footer() {
-  return <footer>PoliCoffee footer</footer>;
+  return <footer className="footer">PoliCoffee footer</footer>;
 }

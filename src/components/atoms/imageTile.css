@@ -1,0 +1,7 @@
+.image-tile {
+  @apply overflow-hidden w-[244px] h-[348px] rounded-tr-[80px] rounded-bl-[80px];
+
+  > img {
+    @apply h-full object-cover;
+  }
+}
