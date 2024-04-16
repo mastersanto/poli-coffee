@@ -1,0 +1,107 @@
+.products {
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 80px;
+  }
+
+  &-title {
+    @apply font-inter;
+    color: #282a3a;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 28.8px */
+  }
+
+  &-subtitle {
+    @apply font-playfair;
+    color: #282a3a;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 43.2px */
+  }
+
+  &-filters {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 40px;
+    background: #f6f6f6;
+    margin-bottom: 40px;
+  }
+
+  &-filter {
+    @apply font-inter;
+    display: flex;
+    width: 180px;
+    padding: 16px 40px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #282a3a;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 28.8px */
+    letter-spacing: 0.48px;
+
+    &--active {
+      background-color: #ffffff;
+    }
+  }
+
+  &-list {
+    @apply flex flex-wrap content-between gap-24;
+    /* display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch; */
+  }
+
+  &-item {
+    /* @apply grow-0 flex flex-wrap flex-col items-center gap-16; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+
+    &--image {
+      height: 240px;
+      align-self: stretch;
+    }
+
+    &--content {
+      display: flex;
+      padding: 16px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      align-self: stretch;
+    }
+
+    &--title {
+      @apply font-inter;
+      color: #282a3a;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 33.6px */
+    }
+
+    &--description {
+      @apply font-inter;
+      color: #282a3a;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 22.4px */
+    }
+  }
+}

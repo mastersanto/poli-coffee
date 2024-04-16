@@ -13,6 +13,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        inter: ["var(--font-inter)"],
+        playfair: ["var(--font-playfair-display)"],
+      },
+      colors: {
+        "brand-coffee": "#6D1600",
+      },
     },
   },
   plugins: [],

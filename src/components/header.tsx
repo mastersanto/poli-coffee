@@ -1,16 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { CiSearch } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
+import { CiSearch } from "react-icons/ci";
 import "./header.css";
 
 export default function Header() {
   return (
     <header className="header">
-      <Image src="/vercel.svg" alt="coffee cup" width={50} height={50} />
-      PoliCoffee
-      <nav className="nav">
+      <div className="header-logo">
+        <Image
+          src="/logo-poli-coffee.png"
+          alt="coffee cup"
+          width={69}
+          height={75}
+        />
+      </div>
+      <nav className="header-nav">
         <ul>
           <li>
             <Link href="#">Productos</Link>
@@ -26,8 +32,8 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <CiSearch className="h-[18px] w-[18px]" />
-      <CgProfile className="h-[18px] w-[18px]" />
+      <CiSearch className="self-center h-[18px] w-[18px]" />
+      <CgProfile className="self-center h-[18px] w-[18px]" />
     </header>
   );
 }

@@ -1,8 +1,9 @@
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import Button from "@/components/atoms/button";
-import ImagesFrieze from "@/components/molecules/imagesFrieze";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import Features from "@/components/molecules/features";
+import ImagesFrieze from "@/components/molecules/imagesFrieze";
+import Products from "@/components/molecules/products";
 
 import imagesFriezeData from "@/data/imagesFriezeData.json";
 
@@ -14,16 +15,19 @@ export default function Home() {
       <Header />
       <main>
         <section className="section">
-          <div>
-            <h1 className="text-4xl font-bold text-center mt-12">
+          <div className="explore-products">
+            <h1 className="explore-products--title">
               café que inspira y nunca expira
             </h1>
-            <p>
+            <p className="explore-products--description">
               Descubre la magia en cada café que hacemos con alma y pasión{" "}
               <br />
               disfruta de cada uno de ellos en nuestro catalogo
             </p>
-            <Button text="Explorar productos" />
+            <Button
+              className="explore-products--button"
+              text="Explorar productos"
+            />
           </div>
           <ImagesFrieze images={imagesFriezeData} />
         </section>
@@ -33,7 +37,7 @@ export default function Home() {
         </section>
         <hr />
         <section className="section">
-          <h3>El verdadero café Colombiano</h3>
+          <Products />
         </section>
         <hr />
         <section className="section">
