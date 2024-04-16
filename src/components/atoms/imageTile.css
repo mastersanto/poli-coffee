@@ -1,5 +1,8 @@
 .image-tile {
-  @apply overflow-hidden w-[244px] h-[348px] rounded-tr-[80px] rounded-bl-[80px];
+  /* @apply overflow-hidden w-[244px] h-[348px] rounded-tr-[80px] rounded-bl-[80px]; */
+  @apply overflow-hidden rounded-tr-[80px] rounded-bl-[80px];
+  flex: 1 0 0;
+  align-self: stretch;
 
   > img {
     @apply h-full object-cover;

@@ -4,10 +4,21 @@
   /*
   align-items: center;
   align-self: stretch;*/
-}
 
-.nav {
-  > ul {
-    @apply flex flex-row;
+  &-title {
+    @apply flex;
+  }
+
+  &-nav {
+    @apply flex items-center;
+    /* @apply flex flex-wrap justify-between w-[622px]; */
+
+    > ul {
+      @apply flex;
+
+      > li {
+        @apply mx-10;
+      }
+    }
   }
 }

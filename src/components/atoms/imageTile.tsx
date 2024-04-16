@@ -12,7 +12,13 @@ const ImageTile = (props: ImageTileProps) => {
 
   return (
     <div className="image-tile">
-      <Image src={src} alt={alt} width="500" height="700" />
+      <Image
+        className="image-tile"
+        src={src}
+        alt={alt}
+        width="500"
+        height="700"
+      />
     </div>
   );
 };

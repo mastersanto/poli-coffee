@@ -1,8 +1,28 @@
 .container {
-  @apply flex flex-col w-[1440px] md:w-auto;
+  @apply flex flex-col max-w-[1440px];
 }
 
 .section {
   @apply flex flex-col items-center gap-20 p-20;
   /* align-self: stretch; */
+}
+
+.explore-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  &--title {
+    @apply text-3xl font-bold font-playfair;
+  }
+
+  &--description {
+    @apply text-lg font-inter;
+  }
+
+  &--button {
+    @apply bg-brand-coffee text-white py-4 px-8 rounded-tr-[24px] rounded-bl-[24px]
+      font-playfair font-thin text-2xl;
+  }
 }

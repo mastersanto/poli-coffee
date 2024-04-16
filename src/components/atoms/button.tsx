@@ -1,15 +1,20 @@
 import "./button.css";
 
 type ButtonProps = {
+  className?: string;
   text: string;
   onClick?: () => void;
 };
 
 const Button = (props: ButtonProps) => {
-  const { text, onClick } = props;
+  const { className, text, onClick } = props;
 
   return (
-    <button type="button" className="button" onClick={onClick}>
+    <button
+      type="button"
+      className={`button ${className ? className : ""}`}
+      onClick={onClick}
+    >
       {text}
     </button>
   );
