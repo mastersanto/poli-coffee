@@ -1,0 +1,28 @@
+.modal {
+  @apply bg-white p-6 rounded-lg shadow-lg;
+
+  &__actions {
+    @apply flex justify-center mt-4 space-x-3;
+  }
+}
+
+.react-aria-ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: var(--visual-viewport-height);
+  background: rgba(0 0 0 / 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  &[data-entering] {
+    animation: modal-fade 200ms;
+  }
+
+  &[data-exiting] {
+    animation: modal-fade 150ms reverse ease-in;
+  }
+}

@@ -1,18 +1,34 @@
+"use client";
+
 import Button from "@/components/atoms/button";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Features from "@/components/molecules/features";
 import ImagesFrieze from "@/components/molecules/imagesFrieze";
+import LoginModal from "@/components/molecules/loginModal";
 import Products from "@/components/molecules/products";
 
 import imagesFriezeData from "@/data/imagesFriezeData.json";
 
+import { useState } from "react";
 import "./page.css";
 
 export default function Home() {
+  const [isLoginModalOpened, setIsLoginModalOpened] = useState(false);
+
+  const handleLogin = (event: any) => {
+    event.preventDefault();
+    console.log("Login");
+  };
+
+  const toggleLoginModal = (event: any) => {
+    console.log("toggleLoginModal");
+    setIsLoginModalOpened(!isLoginModalOpened);
+  };
+
   return (
     <div className="container">
-      <Header />
+      <Header toggleModal={(e: any) => toggleLoginModal(e)} />
       <main>
         <section className="section">
           <div className="explore-products">
@@ -49,6 +65,13 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+      {isLoginModalOpened && (
+        <LoginModal
+          isOpen={isLoginModalOpened}
+          confirmLogin={(e: any) => handleLogin(e)}
+          toggleModal={(e: any) => toggleLoginModal(e)}
+        />
+      )}
     </div>
   );
 }

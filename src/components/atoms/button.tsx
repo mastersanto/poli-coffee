@@ -3,7 +3,7 @@ import "./button.css";
 type ButtonProps = {
   className?: string;
   text: string;
-  onClick?: () => void;
+  onClick?: any;
 };
 
 const Button = (props: ButtonProps) => {
