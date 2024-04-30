@@ -26,3 +26,15 @@
       font-playfair font-thin text-2xl;
   }
 }
+
+.button {
+  @apply bg-brand-coffee text-white py-4 px-8 rounded-tr-[24px] rounded-bl-[24px]
+    font-playfair font-thin text-2xl;
+
+  &--solid {
+    @apply bg-brand-coffee text-white;
+  }
+  &--outline {
+    @apply bg-transparent border-2 border-brand-coffee text-brand-coffee;
+  }
+}
